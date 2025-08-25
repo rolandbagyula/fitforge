@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitForge – Interaktív személyi edző | Edzés, étrend, online coaching</title>
+  <meta name="description" content="FitForge – Személyre szabott edzés, étrend és online coaching. Foglalj időpontot, kalkuláld BMI-ed és napi kalóriád. Valós eredmények, rugalmas csomagok." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0B0B0D" />
+  <link rel="canonical" href="https://fitforge.hu/" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN for utilities (no build required) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="https://favicon.io/favicon-generator/?t=FF&ff=Inter&fs=100&fc=%23FFFFFF&b=rounded&bc=%23FF6A00" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FitForge – Interaktív személyi edző" />
+  <meta property="og:description" content="Személyre szabott edzés és étrend. Foglalj időpontot még ma!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fitforge.hu/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&auto=format&fit=crop&q=60" />
+  <meta property="og:locale" content="hu_HU" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FitForge – Interaktív személyi edző" />
+  <meta name="twitter:description" content="Személyre szabott edzés és étrend. Foglalj időpontot még ma!" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&auto=format&fit=crop&q=60" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&auto=format&fit=crop&q=60" imagesrcset="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&auto=format&fit=crop&q=60&fm=webp 1600w" imagesizes="100vw" />
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FitForge",
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&auto=format&fit=crop&q=60",
+    "url": "https://fitforge.hu/",
+    "description": "Személyre szabott edzés, étrend és online coaching.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Budapest",
+      "addressCountry": "HU"
+    },
+    "priceRange": "$$",
+    "telephone": "+36 30 000 0000",
+    "sameAs": [
+      "https://www.instagram.com/",
+      "https://www.facebook.com/"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#0B0B0D] text-white font-[Inter,Roboto,system-ui,sans-serif] selection:bg-[#FF6A00]/30">
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Ugrás a tartalomra</a>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-[#0B0B0D]/80 backdrop-blur supports-[backdrop-filter]:bg-[#0B0B0D]/60 border-b border-white/5" role="banner">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group" aria-label="FitForge kezdőlap">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-[#FF6A00] font-extrabold">FF</span>
+        <span class="text-xl font-bold tracking-tight group-hover:text-[#FF6A00] transition-colors">FitForge</span>
+      </a>
+      <nav aria-label="Fő navigáció">
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a class="nav-link" href="#services">Szolgáltatások</a></li>
+          <li><a class="nav-link" href="#results">Eredmények</a></li>
+          <li><a class="nav-link" href="#pricing">Csomagok</a></li>
+          <li><a class="nav-link" href="#booking">Foglalás</a></li>
+          <li><a class="nav-link" href="#faq">GYIK</a></li>
+        </ul>
+      </nav>
+      <a href="#booking" class="hidden md:inline-flex btn-primary">Időpont foglalása</a>
+      <button class="md:hidden inline-flex items-center justify-center p-2 rounded outline-offset-2 focus:outline focus:outline-2 focus:outline-[#FF6A00]" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menü váltása">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/5" role="dialog" aria-label="Mobil menü">
+      <ul class="px-4 py-3 space-y-2">
+        <li><a class="nav-link block" href="#services">Szolgáltatások</a></li>
+        <li><a class="nav-link block" href="#results">Eredmények</a></li>
+        <li><a class="nav-link block" href="#pricing">Csomagok</a></li>
+        <li><a class="nav-link block" href="#booking">Foglalás</a></li>
+        <li><a class="nav-link block" href="#faq">GYIK</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&auto=format&fit=crop&q=60&fm=webp" type="image/webp" sizes="100vw" />
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&auto=format&fit=crop&q=60" alt="Edzés a FitForge-nál – energikus edzőtermi hangulat" class="w-full h-full object-cover opacity-35" loading="eager" fetchpriority="high" decoding="async" width="1600" height="900" />
+        </picture>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
+        <div class="max-w-2xl" data-animate>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            Formáld magad a FitForge-nál
+          </h1>
+          <p class="mt-4 text-white/80 text-lg md:text-xl">
+            Személyre szabott edzés, étrend és online coaching – mérhető eredményekkel.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#booking" class="btn-primary">Időpont foglalása</a>
+            <a href="#booking" class="btn-secondary">Ingyenes konzultáció</a>
+          </div>
+          <p class="mt-6 text-sm text-white/60">Magas kontraszt, gyors, hozzáférhető – WCAG 2.1 AA</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof quick strip -->
+    <section class="bg-[#16161A]" aria-label="Társadalmi bizonyíték">
+      <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-sm" data-animate>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">★★★★★</span><span>4.9/5 értékelés</span></div>
+        <div class="text-white/70">500+ sikeres átalakulás</div>
+        <div class="text-white/70">100% személyre szabás</div>
+        <div class="text-white/70">Online és személyes</div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-[#0B0B0D]" aria-labelledby="services-title">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <h2 id="services-title" class="section-title" data-animate>Szolgáltatások</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-animate>
+          <!-- Card -->
+          <article class="card">
+            <img class="card-img" alt="Egyéni edzés – személyi edző támogatással" loading="lazy" src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&auto=format&fit=crop&q=60" width="800" height="600" decoding="async" />
+            <h3 class="card-title">Egyéni edzés</h3>
+            <p class="card-text">Teljesen rád szabott edzéstervek, biztonságos és hatékony fejlődés.</p>
+          </article>
+          <article class="card">
+            <img class="card-img" alt="Személyre szabott étrend terv" loading="lazy" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop&q=60" width="800" height="600" decoding="async" />
+            <h3 class="card-title">Étrend</h3>
+            <p class="card-text">Fenntartható, ízletes étrend – céljaid és életmódod szerint.</p>
+          </article>
+          <article class="card">
+            <img class="card-img" alt="Online coaching – edzés otthonról" loading="lazy" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&auto=format&fit=crop&q=60" width="800" height="600" decoding="async" />
+            <h3 class="card-title">Online coaching</h3>
+            <p class="card-text">Rugalmas, üzenet alapú támogatás és videós ellenőrzések.</p>
+          </article>
+          <article class="card">
+            <img class="card-img" alt="Mobil alkalmazás támogatás" loading="lazy" src="https://images.unsplash.com/photo-1514672013381-c6d0df1c8b18?w=800&auto=format&fit=crop&q=60" width="800" height="600" decoding="async" />
+            <h3 class="card-title">Mobil apptámogatás</h3>
+            <p class="card-text">Haladáskövetés, emlékeztetők, edzésnapló – mindig nálad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results: Before-After Slider -->
+    <section id="results" class="bg-[#16161A]" aria-labelledby="results-title">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <h2 id="results-title" class="section-title" data-animate>Eredmények</h2>
+        <div class="mt-8" data-animate>
+          <div class="before-after" role="group" aria-label="Előtte–utána összehasonlító csúszka">
+            <div class="before-after__wrap">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&auto=format&fit=crop&q=60" alt="Előtte kép – testforma a program előtt" class="before-after__img" loading="lazy" decoding="async" width="1600" height="900" />
+              <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1600&auto=format&fit=crop&q=60" alt="Utána kép – testforma a program után" class="before-after__img before-after__img--top" loading="lazy" decoding="async" width="1600" height="900" />
+              <div class="before-after__divider" aria-hidden="true"></div>
+            </div>
+            <input type="range" class="before-after__range" min="0" max="100" value="50" aria-label="Csúszka az előtte–utána nézethez" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="bg-[#0B0B0D]" aria-labelledby="pricing-title">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex items-center justify-between gap-4" data-animate>
+          <h2 id="pricing-title" class="section-title">Csomagok</h2>
+          <div class="flex items-center gap-2 text-sm">
+            <span>Alkalmi</span>
+            <label class="switch">
+              <input id="priceToggle" type="checkbox" aria-label="Váltás havi díjra" />
+              <span class="slider"></span>
+            </label>
+            <span>Havi</span>
+          </div>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3" data-animate>
+          <article class="price-card" aria-label="Starter csomag">
+            <h3 class="price-title">Starter</h3>
+            <p class="price-price" data-price="starter" data-session="8000" data-month="29900">8 000 Ft / alkalom</p>
+            <ul class="price-feats">
+              <li>Egyéni edzésterv</li>
+              <li>Haladáskövetés</li>
+              <li>Email támogatás</li>
+            </ul>
+            <a href="#booking" class="btn-secondary w-full">Kiválasztom</a>
+          </article>
+          <article class="price-card price-card--featured" aria-label="Pro csomag - kiemelt">
+            <div class="sr-only">Kiemelt ajánlat</div>
+            <h3 class="price-title">Pro</h3>
+            <p class="price-price" data-price="pro" data-session="12000" data-month="44900">12 000 Ft / alkalom</p>
+            <ul class="price-feats">
+              <li>Edzés + étrend</li>
+              <li>Heti videós check-in</li>
+              <li>Prioritásos támogatás</li>
+            </ul>
+            <a href="#booking" class="btn-primary w-full">Kiválasztom</a>
+          </article>
+          <article class="price-card" aria-label="Elite csomag">
+            <h3 class="price-title">Elite</h3>
+            <p class="price-price" data-price="elite" data-session="18000" data-month="64900">18 000 Ft / alkalom</p>
+            <ul class="price-feats">
+              <li>Teljes életmód coaching</li>
+              <li>Korlátlan üzenet</li>
+              <li>App prémium funkciók</li>
+            </ul>
+            <a href="#booking" class="btn-secondary w-full">Kiválasztom</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="bg-[#16161A]" aria-labelledby="calc-title">
+      <div class="max-w-7xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-2">
+        <div data-animate>
+          <h2 id="calc-title" class="section-title">Kalkulátor</h2>
+          <p class="text-white/70 mt-2">BMI és napi kalória igény – metrikus egységek, valós időben.</p>
+          <form class="mt-6 grid grid-cols-2 gap-4" aria-describedby="calcHelp">
+            <div class="col-span-2 sm:col-span-1">
+              <label class="form-label" for="gender">Nem</label>
+              <select id="gender" class="form-input">
+                <option value="male">Férfi</option>
+                <option value="female">Nő</option>
+              </select>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label class="form-label" for="age">Életkor</label>
+              <input id="age" class="form-input" type="number" inputmode="numeric" min="10" max="100" value="30" />
+            </div>
+            <div>
+              <label class="form-label" for="height">Magasság (cm)</label>
+              <input id="height" class="form-input" type="number" inputmode="decimal" min="120" max="230" value="175" />
+            </div>
+            <div>
+              <label class="form-label" for="weight">Testsúly (kg)</label>
+              <input id="weight" class="form-input" type="number" inputmode="decimal" min="35" max="200" value="75" />
+            </div>
+            <div class="col-span-2">
+              <label class="form-label" for="activity">Aktivitási szint</label>
+              <select id="activity" class="form-input">
+                <option value="1.2">Alacsony</option>
+                <option value="1.375">Könnyű</option>
+                <option value="1.55" selected>Közepes</option>
+                <option value="1.725">Magas</option>
+                <option value="1.9">Nagyon magas</option>
+              </select>
+            </div>
+            <p id="calcHelp" class="col-span-2 text-xs text-white/60">A számítás a Mifflin–St Jeor képleten alapul.</p>
+          </form>
+        </div>
+        <div class="grid gap-4 content-start" data-animate>
+          <div class="stat">
+            <div class="stat__label">BMI</div>
+            <div class="stat__value" id="bmiValue">—</div>
+            <div class="stat__help" id="bmiClass">—</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">Becsült napi kalória</div>
+            <div class="stat__value" id="calorieValue">— kcal</div>
+            <div class="stat__help">Fenntartáshoz szükséges kalória</div>
+          </div>
+        </div>
+      </div>
+    </section>
+          <p id="consentErr" class="form-error" hidden>Kérjük, fogadd el az adatkezelést.</p>
+          <div class="flex gap-3 pt-2">
+            <button type="submit" class="btn-primary">Küldés</button>
+            <button type="reset" class="btn-secondary">Törlés</button>
+          </div>
+          <div role="status" aria-live="polite" id="formStatus" class="text-sm"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-[#16161A]" aria-labelledby="faq-title">
+      <div class="max-w-3xl mx-auto px-4 py-16">
+        <h2 id="faq-title" class="section-title" data-animate>GYIK</h2>
+        <div class="mt-6" data-animate>
+          <div class="accordion" id="faqList">
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-btn" aria-expanded="false" aria-controls="faq1" id="q1">Mennyi idő alatt látható eredmény?</button>
+              </h3>
+              <div id="faq1" role="region" aria-labelledby="q1" class="accordion-panel hidden">
+                <p>Általában 4–8 hét alatt már érezhető és látható változások jönnek, egyéni tényezőktől függően.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-btn" aria-expanded="false" aria-controls="faq2" id="q2">Kezdők is jelentkezhetnek?</button>
+              </h3>
+              <div id="faq2" role="region" aria-labelledby="q2" class="accordion-panel hidden">
+                <p>Igen, a program teljesen személyre szabott, a nulláról is biztonságosan indítunk.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-btn" aria-expanded="false" aria-controls="faq3" id="q3">Hol zajlanak az edzések?</button>
+              </h3>
+              <div id="faq3" role="region" aria-labelledby="q3" class="accordion-panel hidden">
+                <p>Budapesti edzőtermekben és/vagy online, egyeztetés alapján.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Structured Data: FAQPage -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mennyi idő alatt látható eredmény?",
+              "acceptedAnswer": {"@type":"Answer","text":"Általában 4–8 hét alatt már érezhető és látható változások jönnek, egyéni tényezőktől függően."}
+            },
+            {
+              "@type": "Question",
+              "name": "Kezdők is jelentkezhetnek?",
+              "acceptedAnswer": {"@type":"Answer","text":"Igen, a program teljesen személyre szabott, a nulláról is biztonságosan indítunk."}
+            },
+            {
+              "@type": "Question",
+              "name": "Hol zajlanak az edzések?",
+              "acceptedAnswer": {"@type":"Answer","text":"Budapesti edzőtermekben és/vagy online, egyeztetés alapján."}
+            }
+          ]
+        }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0B0B0D] border-t border-white/5" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-[#FF6A00] font-bold">FF</span>
+          <span class="font-bold">FitForge</span>
+        </div>
+        <p class="mt-3 text-white/60">Személyi edzés, étrend és coaching – egy helyen.</p>
+      </div>
+      <nav aria-label="Gyorslinkek">
+        <ul class="space-y-2 text-white/80">
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#services">Szolgáltatások</a></li>
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#pricing">Csomagok</a></li>
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#booking">Foglalás</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Közösségi">
+        <ul class="space-y-2 text-white/80">
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Jogi">
+        <ul class="space-y-2 text-white/80">
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#">ÁSZF</a></li>
+          <li><a class="hover:text-[#FF6A00] focus-visible:outline-[#FF6A00]" href="#">Adatkezelés</a></li>
+        </ul>
+      </nav>
+      <p class="md:col-span-4 text-xs text-white/50">© <span id="year"></span> FitForge. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="mobile-cta md:hidden" role="region" aria-label="Gyors foglalás">
+    <a href="#booking" class="btn-primary w-full text-center">Foglalj most</a>
+  </div>
+
+  <noscript>
+    <div class="max-w-7xl mx-auto px-4 py-4 text-sm text-white/70">
+      A JavaScript ki van kapcsolva. Egyes funkciók (animációk, kalkulátor, menü) nem működnek.
+    </div>
+  </noscript>
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node / Frontend (ha később bővül a projekt)
+node_modules/
+dist/
+build/
+.cache/
+.tmp/
+
+# Env / creds
+.env
+.env.*
+
+# Mac OneDrive cache
+*.icloud
+
+# Coverage / tests
+coverage/
