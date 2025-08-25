@@ -94,3 +94,7 @@ img{max-width:100%;height:auto}
 
 /* Focus visible default */
 :focus-visible{outline:2px solid var(--cta);outline-offset:2px}
+
+/* Calc actions fallback centering (works without Tailwind) */
+.center-actions{text-align:center}
+.center-actions .btn-row{display:inline-flex;gap:.75rem}

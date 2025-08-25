@@ -231,7 +231,7 @@
         <div data-animate>
           <h2 id="calc-title" class="section-title">Kalkulátor</h2>
           <p class="text-white/70 mt-2">BMI és napi kalória igény – metrikus egységek, valós időben.</p>
-          <form class="mt-6 grid grid-cols-2 gap-4" aria-describedby="calcHelp">
+          <form id="calcForm" class="mt-6 grid grid-cols-2 gap-4" aria-describedby="calcHelp">
             <div class="col-span-2 sm:col-span-1">
               <label class="form-label" for="gender">Nem</label>
               <select id="gender" class="form-input">
@@ -262,6 +262,8 @@
               </select>
             </div>
             <p id="calcHelp" class="col-span-2 text-xs text-white/60">A számítás a Mifflin–St Jeor képleten alapul.</p>
+            <p id="consentErr" class="col-span-2 form-error" hidden>Kérjük, fogadd el az adatkezelést.</p>
+            <div role="status" aria-live="polite" id="formStatus" class="col-span-2 text-sm"></div>
           </form>
         </div>
         <div class="grid gap-4 content-start" data-animate>
@@ -276,15 +278,6 @@
             <div class="stat__help">Fenntartáshoz szükséges kalória</div>
           </div>
         </div>
-      </div>
-    </section>
-          <p id="consentErr" class="form-error" hidden>Kérjük, fogadd el az adatkezelést.</p>
-          <div class="flex gap-3 pt-2">
-            <button type="submit" class="btn-primary">Küldés</button>
-            <button type="reset" class="btn-secondary">Törlés</button>
-          </div>
-          <div role="status" aria-live="polite" id="formStatus" class="text-sm"></div>
-        </form>
       </div>
     </section>
 
